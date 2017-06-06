@@ -47,14 +47,14 @@ class App extends React.Component {
   }
 
   removeFish = (key) => {
-    const fishes = {...this.props.fishes};
+    const fishes = {...this.state.fishes};
     fishes[key] = null;
 
     this.setState({fishes});
   }
 
   updateFish = (key, updatedFish) => {
-    const fishes = {...this.props.fishes};
+    const fishes = {...this.state.fishes};
     fishes[key] = updatedFish;
 
     this.setState({fishes});
@@ -110,5 +110,6 @@ class App extends React.Component {
     );
   }
 }
+
 
 export default App;
